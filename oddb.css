@@ -171,10 +171,13 @@ body {
     position: relative;
     overflow: hidden;
     -webkit-text-stroke: 0.09px black;
-    border-bottom: 3px solid #1b0025;
-    border-right: 3px solid #1b0025;
-    background-color: white;
+    border-radius: 3.236rem;
+    border-bottom: 1.618rem solid #1b0025;
+    border-image: linear-gradient(to left, #1b0025, #fffdfc) 1;
+    background-color: #fffdfc;
 }
+
+
 
 .sub-text {
     font-size: 0.9rem;
@@ -294,6 +297,7 @@ body {
     grid-template-columns: 1fr 3fr;
     gap: 1.618rem;
     border: 9.708px solid #1b0025;
+    border-radius: 3.236rem;
     padding: .809rem;
     margin: 1.618rem 3.236rem;
 }
@@ -302,6 +306,7 @@ body {
     background-color: #1a1a2e;
     padding: 1.618rem;
     flex: 0 0 250.79px;
+    border-radius: 3.236rem;
 }
 
 .sidebar__list {
@@ -331,7 +336,7 @@ body {
     padding: 3.236rem;
     overflow-y: auto;
     flex: 1;
-    border-radius: 0.809rem;
+    border-radius: 3.236rem;
 }
 
 .content__item {
@@ -392,6 +397,7 @@ body {
     padding: 1.618rem;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 1.618rem;
     background: linear-gradient(to top, #1b0025, #fffdfc);
 }
 
