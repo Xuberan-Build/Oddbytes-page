@@ -1,0 +1,468 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica', sans-serif;
+    line-height: 1.618;
+    background: #fff7f3;
+    color: #333;
+}
+
+.header-container {
+    background: white;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: auto;
+    padding: 1.618rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.header-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.header-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1.618rem;
+    align-items: end;
+}
+.header {
+    margin-left: 3.236rem;
+    text-align: start;
+    padding: 3.236rem;
+    background: white;
+}
+
+.header__paragraph {
+    position: relative;
+    text-align: left;
+    top: 1.618em;
+    margin-bottom: 2rem;
+}
+
+.header__title {
+    font-size: 30px;
+    color: #1b0025;
+}
+
+.header__subtitle {
+    font-size: 24px;
+    color: #666;
+    margin-top: .8090rem;
+}
+
+.logo{
+    justify-self: end;
+    margin-left: 3.236rem;
+    bottom: 1.618rem;
+    transition: transform 0.9s ease-out;
+}
+
+.logo:hover {
+    transform: rotate(360deg);
+}
+
+/* Icons */
+.content {
+    background: linear-gradient(to bottom, #1b0025, #fffdfc);
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.809rem;
+    margin-top: -1.618rem;
+    justify-content: center;
+    padding: 1.618rem;
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(16px);
+    }
+}
+
+.grid__item {
+    font-size: 19px;
+    color: #1b0025;
+    padding: 0.809rem;
+    background-color: white;
+    border-radius: 3.236px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transform: rotateY(0.9deg) scale(1);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+    animation: fadeIn 1s ease forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.grid__item:hover {
+    transform: rotateY(25deg) scale(1.05);
+}
+
+.grid__item--animated {
+    transform: translateY(-50px) rotateX(10deg);
+    transition: transform 0.5s ease-out;
+}
+
+.grid__item h3 {
+    padding: 1.213rem;
+    font-size: 1.6rem; /* Adjust font size if needed */
+    color: #1b0025;
+}
+
+.image-container {
+    width: 153.5px;
+    height: 153.5px;
+    border-radius: 50%;
+    border: 6.472px solid #1b0025;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.grid__icon {
+    width: 129%;
+    height: 129%;
+    object-fit: contain;
+    border: 0;
+}
+
+.image-container a {
+    display: block;
+    text-align: center;
+    padding-right: 1.618rem;
+}
+
+
+/*Personality Section*/
+.grid--2cols {
+    display: grid;
+    grid-template-columns: 1fr minmax(500px, 1fr); /* Adjust the second column for the video */
+    gap: 4.854rem;
+    margin-top: -1.618rem;
+    margin-bottom: -1.618rem;
+}
+
+.section_personality_subtitle {
+    line-height: 1.618;
+    padding: 1.618rem;
+    top: -1.618rem;
+    position: relative;
+    overflow: hidden;
+    -webkit-text-stroke: 0.09px black;
+    border-bottom: 3px solid #1b0025;
+    border-right: 3px solid #1b0025;
+    background-color: white;
+}
+
+.sub-text {
+    font-size: 0.9rem;
+    color: #555;
+    text-align: start;
+    display: block;
+    margin-top: 0.809rem;
+    font-weight: normal;
+}
+
+
+.grid__text {
+    padding: 1.618rem;
+    opacity: .5;
+    animation: fadeInText .5s ease-out forwards;
+    animation-delay: 2s;
+}
+
+.grid__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+
+.grid__image video {
+    width: 100%; /* Make the video take up the full width of the container */
+    height: 100%; /* Make the video take up the full height of the container */
+    object-fit: cover;
+}
+
+.image__placeholder {
+    width: 100%;
+    height: auto;
+    max-height: 300px; /* Optional: Adjust based on your design requirements */
+}
+
+.list__item {
+    margin: 0.806rem 0 0.806rem 3.236rem;
+    line-height: 1.618;
+    text-align: justify;
+}
+
+.list__subtext {
+    display: block;
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 0.5rem;
+    margin-left: 3.236rem;
+    padding: .809rem;
+}
+
+.section__subtitle {
+    margin-top: 1.618rem;
+}
+
+@media (max-width: 768px) {
+    .grid--2cols {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .section.personality {
+        padding: 20px; /* Reduced padding for small screens */
+    }
+    .section__title {
+        font-size: 20px; /* Smaller title for small screens */
+    }
+}
+
+/* TSS - Initial state - hidden and moved slightly down */
+.section__title,
+.grid__text {
+    opacity: 0;
+    transform: translateY(20px);
+    visibility: hidden; /* Ensures the elements are not focusable/clickable */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/*TSS - in view - fade in and slide up */
+.section__title.in-view,
+.grid__text.in-view {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.grid__text.in-view {
+    transition-delay: 0.3s;
+}
+
+/* VSS - Initial state: video is off-screen to the right and invisible */
+.video-slide-in {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 0.9s ease-out, opacity 0.6s ease-out;
+    visibility: hidden; /* Ensures the video is not focusable/clickable */
+}
+
+/* When the video is in view, it slides in from the right */
+.video-slide-in.in-view {
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+}
+
+
+/*Section Goals*/
+.goals-modal {
+    display: grid;
+    align-items: stretch;
+    min-height: 14.564rem;
+    grid-template-columns: 1fr 3fr;
+    gap: 1.618rem;
+    border: 9.708px solid #1b0025;
+    padding: .809rem;
+    margin: 1.618rem 3.236rem;
+}
+
+.sidebar {
+    background-color: #1a1a2e;
+    padding: 1.618rem;
+    flex: 0 0 250.79px;
+}
+
+.sidebar__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar__item {
+    margin-left: .809rem;
+    padding: 1rem 0.809rem;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    color: #fffdfc;
+    font-weight: bold;
+}
+
+.sidebar__item:hover {
+    background-color: #2a2a3e;
+}
+
+.content__display {
+    background-color: #fffdfc;
+}
+
+.content {
+    padding: 3.236rem;
+    overflow-y: auto;
+    flex: 1;
+    border-radius: 0.809rem;
+}
+
+.content__item {
+    display: none;
+    background: rgba(255, 253, 252, 0.77);
+    padding: 1.618rem;
+}
+
+.content__item.active {
+    display: block; /* Show content when it is active */
+    color: #333333; /* Dark grey text for good readability */
+    padding: 1.618rem; /* Padding inside active content items using the golden ratio */
+    background-color: #ffffff; /* White background for the active content item */
+    border-radius: 0.618rem; /* Slightly rounded corners for the active item */
+    box-shadow: 0 0.618rem 1.618rem rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.custom-bullets {
+    padding-left: 0.809rem;
+    list-style-position: inside;
+}
+
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: .0809s; /* Delay of 1.618 seconds */
+    opacity: 0; /* Start invisible */
+}
+
+/*section thoughts*/
+.section__title {
+    font-size: 24px;
+    color: #1b0025;
+    padding: 1.618rem;
+    margin-top: 3.236rem;
+    margin-bottom: 2.618rem; /* Increased to give more space between title and first accordion */
+    text-align: center;
+}
+
+.accodion-wrapper {
+    max-width: 88.99%;
+    padding: .809rem;
+    margin-bottom: 3.236rem;
+}
+.accordion {
+    justify-content: center;
+    margin-top: 1.618rem;
+    margin-bottom: -1.618rem;
+    max-width: 88.99%;
+    box-shadow: 0.809rem 1.618rem 1.618rem -0.1rem rgba(0, 0, 0, 0.16);
+    border-radius: 1.618px;
+    padding: 1.618rem;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(to top, #1b0025, #fffdfc);
+}
+
+.section__subtitle {
+    background: white;
+    height: 3.236rem;
+    padding: .809rem .809rem;
+    color: #1b0025;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s ease;
+}
+
+.section__subtitle::after {
+    content: '\002B'; /* Plus sign */
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+
+.section__subtitle.active::after {
+    transform: rotate(45deg); /* Rotates to create an "X" when active */
+}
+
+.section__subtitle:hover {
+    background-color: #f4f4f9; /* Light grey background on hover */
+}
+
+.accordion-content {
+    background: white;
+    cursor: pointer;
+    margin-top: .809rem;
+    padding: 0;
+    justify-content: center;
+    opacity: 0.8;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.32s ease-out, opacity 0.3s ease-out;
+}
+
+.accordion-content.open {
+    padding: .809rem;
+    max-height: 500px;
+    opacity: 1;
+}
+
+
+
+.accordion-header:hover {
+    background-color: #e0e0e0;
+}
+
+
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list__item {
+    padding: .802rem;
+    border-top: 1.618px solid #eee;
+    margin-left: 3.236rem;
+    margin-bottom: -.809rem;
+    color: #1b0025;
+}
+
+.bottom-spacer{
+    height: 6.472rem;
+}
