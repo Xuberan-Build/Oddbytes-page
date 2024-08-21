@@ -167,7 +167,7 @@ body {
 .section_personality_subtitle {
     line-height: 1.618;
     padding: 1.618rem;
-    top: -1.618rem;
+    top: 1.618rem;
     position: relative;
     overflow: hidden;
     -webkit-text-stroke: 0.09px black;
@@ -184,7 +184,7 @@ body {
     color: #555;
     text-align: start;
     display: block;
-    margin-top: 0.809rem;
+    margin-top: 1.618rem;
     font-weight: normal;
 }
 
@@ -219,9 +219,10 @@ body {
 }
 
 .list__item {
-    margin: 0.806rem 0 0.806rem 3.236rem;
+    margin: 1.618rem 0 0.806rem 3.236rem;
     line-height: 1.618;
     text-align: justify;
+    padding: 3.236rem;
 }
 
 .list__subtext {
@@ -230,7 +231,7 @@ body {
     color: #666;
     margin-top: 0.5rem;
     margin-left: 3.236rem;
-    padding: .809rem;
+    padding: 1.618rem;
 }
 
 .section__subtitle {
